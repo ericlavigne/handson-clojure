@@ -7,4 +7,6 @@
 
 (deftest can-convert-decimal-to-roman
   (is (= "" (roman 0)))
-  (is (= "I" (roman 1))))
+  (is (= "I" (roman 1)))
+  (is (= "II" (roman 2)))
+  #_(is (= "IV" (roman 4))))
