@@ -14,4 +14,7 @@
   (testing "convert 2 to roman"
     (is (= "II" (dec-to-roman 2)))))
 
+(deftest four-case
+  (testing "convert 4 to roman"
+    (is (= "IV" (dec-to-roman 4)))))
 
