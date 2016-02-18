@@ -17,14 +17,14 @@
         [1 "I"]])
 
 (defn roman [x]
-  (loop [x x
-         acc ""]
-    (if (= x 0)
-      acc
-      (let [[d r] (first (filter (fn [e] (>= x (first e))) d))
-            q (quot x d)
-            remainder (- x (* q d))]
-        (recur remainder (apply str acc (take q (repeat r))))))))
+  (second
+    (reduce (fn [[x acc] [d r]]
+              (if (> d x)
+                [x acc]
+                (let [q (quot x d)
+                      rem (- x (* q d))]
+                  [rem (apply str acc (take q (repeat r)))])))
+            [x ""] d)))
 
 (deftest can-convert-decimal-to-roman
   (is (= "" (roman 0)))
