@@ -17,4 +17,5 @@
   (is (= "IV" (roman 4)))
   (is (= "V" (roman 5)))
   (is (= "VI" (roman 6)))
-  (is (= "VIII" (roman 8))))
+  (is (= "VIII" (roman 8)))
+  (is (= "IX" (roman 9))))
