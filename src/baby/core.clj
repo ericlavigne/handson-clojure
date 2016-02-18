@@ -19,14 +19,14 @@
   (filter #(<= % maximum) numbers))
 
 (defn highest-useable-conversion-key [decimal]
-  (select-smaller-numbers decimal (keys conversion-table)))
+  (apply max (select-smaller-numbers decimal (keys conversion-table))))
 
 (defn dec-to-roman [dec]
   (cond
     (= 0 dec) ""
     (< dec 0) (str "-"
                    (dec-to-roman (- dec)))
-    :else  (let [conversion-key (apply max (select-smaller-numbers dec (keys conversion-table)))]
+    :else  (let [conversion-key (highest-useable-conversion-key dec)]
              (str (conversion-table conversion-key)
                   (dec-to-roman (- dec conversion-key))))))
 
