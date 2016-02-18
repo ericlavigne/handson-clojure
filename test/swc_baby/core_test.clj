@@ -9,11 +9,14 @@
         [1 "I"]])
 
 (defn roman [x]
-  (if (= x 0)
-    ""
-    (let [[d r] (first (filter (fn [e] (>= x (first e))) d))
-          q (quot x d)]
-      (apply str (take q (repeat r))))))
+  (loop [x x
+         acc ""]
+    (if (= x 0)
+      acc
+      (let [[d r] (first (filter (fn [e] (>= x (first e))) d))
+            q (quot x d)
+            remainder (- x (* q d))]
+        (recur remainder (apply str acc (take q (repeat r))))))))
 
 (deftest can-convert-decimal-to-roman
   (is (= "" (roman 0)))
