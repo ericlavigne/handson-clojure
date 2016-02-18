@@ -3,7 +3,9 @@
             [swc-baby.core :refer :all]))
 
 (defn roman [x]
-  (apply str (take x (repeat "I"))))
+  (if (= 4 x)
+    "IV"
+    (apply str (take x (repeat "I")))))
 
 (deftest can-convert-decimal-to-roman
   (is (= "" (roman 0)))
