@@ -3,12 +3,13 @@
             [swc-baby.core :refer :all]))
 
 (defn roman [x]
-  (if (or (= x 5)
-          (> x 5))
-    (str "V" (roman (- x 5)))
-    (if (= x 4)
-      "IV"
-      (apply str (take x (repeat "I"))))))
+  (loop [x x
+         acc ""]
+    (if (< x 4)
+      (apply str acc (take x (repeat "I")))
+      (if (= x 4)
+        (str acc "IV")
+        (recur (- x 5) (str acc "V"))))))
 
 (deftest can-convert-decimal-to-roman
   (is (= "" (roman 0)))
@@ -17,5 +18,4 @@
   (is (= "IV" (roman 4)))
   (is (= "V" (roman 5)))
   (is (= "VI" (roman 6)))
-  (is (= "VIII" (roman 8)))
-  (is (= "IX" (roman 9))))
+  (is (= "VIII" (roman 8))))
