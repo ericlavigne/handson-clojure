@@ -17,6 +17,5 @@
     (cond
       (= 0 dec) ""
       (< dec 0) (str (dec-to-roman dec))
-      (= conversion-key dec) (conversion-table conversion-key)
       :else (conversion-table conversion-key))))
 
