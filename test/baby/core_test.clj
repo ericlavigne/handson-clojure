@@ -22,3 +22,7 @@
   (testing "convert 36 to roman"
     (is (= "XXXVI" (dec-to-roman 36)))))
 
+(deftest fifty-test
+  (testing "convert 50 to roman"
+    (is (= "L" (dec-to-roman 50)))))
+
