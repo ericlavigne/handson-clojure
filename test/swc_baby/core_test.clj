@@ -3,10 +3,9 @@
             [swc-baby.core :refer :all]))
 
 (defn roman [x]
-  (if (not (= 0 x))
-    "I"
-    ""))
+  (apply str (take x (repeat "I"))))
 
 (deftest can-convert-decimal-to-roman
   (is (= "" (roman 0)))
-  (is (= "I" (roman 1))))
+  (is (= "I" (roman 1)))
+  (is (= "II" (roman 2))))
