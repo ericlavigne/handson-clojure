@@ -16,7 +16,7 @@
  ([dec] (dec-to-roman dec ""))
  ([dec acc]
   (if (<= dec 0)
-    ""
+    acc
     (let [lowest (find-lowest-key dec)]
       (or (conversion-table dec)
         "II")))))
