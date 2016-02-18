@@ -5,3 +5,8 @@
 (deftest a-test
   (testing "Adding numbers"
     (is (= 1 1))))
+
+(deftest one-test
+  (testing "convert 1 to roman"
+    (is (= "I" (dec-to-roman 1)))))
+
