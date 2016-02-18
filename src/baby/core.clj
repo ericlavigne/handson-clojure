@@ -17,7 +17,8 @@
  ([dec acc]
   (if (<= dec 0)
     acc
-    (let [lowest (find-lowest-key dec)]
+    (let [lowest (find-lowest-key dec)
+          converted (conversion-table lowest)]
       (or (conversion-table dec)
         "II")))))
 
