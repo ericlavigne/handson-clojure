@@ -13,9 +13,9 @@
    7 "VII"})
 
 (defn dec-to-roman [dec]
-  (let [conversion-key (apply max (filter #(<= % dec) (keys conversion-table)))]
-    (cond
-      (= 0 dec) ""
-      (< dec 0) (str (dec-to-roman dec))
-      :else (conversion-table conversion-key))))
+  (cond
+    (= 0 dec) ""
+    (< dec 0) (str (dec-to-roman dec))
+    :else  (let [conversion-key (apply max (filter #(<= % dec) (keys conversion-table)))]
+             (conversion-table conversion-key))))
 
