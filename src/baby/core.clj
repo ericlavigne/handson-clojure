@@ -12,10 +12,12 @@
 (defn find-lowest-key [dec]
   (apply max (filter #(<= % dec) (keys conversion-table))))
 
-(defn dec-to-roman [dec]
+(defn dec-to-roman
+ ([dec] (dec-to-roman dec ""))
+ ([dec acc]
   (if (<= dec 0)
     ""
     (let [lowest (find-lowest-key dec)]
       (or (conversion-table dec)
-        "II"))))
+        "II")))))
 
