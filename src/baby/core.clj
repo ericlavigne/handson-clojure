@@ -26,9 +26,11 @@
 (defn dec-to-roman
  ([dec] (dec-to-roman dec ""))
  ([dec acc]
+  (if (< dec 0)
+    (recur (* -1 dec) "-")
   (if (<= dec 0)
     acc
     (let [lowest (find-lowest-key dec)
           converted (conversion-table lowest)]
-      (recur (- dec lowest) (str acc converted))))))
+      (recur (- dec lowest) (str acc converted)))))))
 

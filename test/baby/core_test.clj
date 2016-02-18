@@ -34,3 +34,7 @@
   (testing "the hard example"
     (is (= "MCMXCVI" (dec-to-roman 1996)))))
 
+(deftest neg-test
+  (testing "negatives"
+    (is (= "-I" (dec-to-roman -1)))))
+
