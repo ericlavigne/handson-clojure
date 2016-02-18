@@ -18,3 +18,7 @@
   (testing "convert 4 to roman"
     (is (= "IV" (dec-to-roman 4)))))
 
+(deftest thirty-six-test
+  (testing "convert 36 to roman"
+    (is (= "XXXVI" (dec-to-roman 36)))))
+
