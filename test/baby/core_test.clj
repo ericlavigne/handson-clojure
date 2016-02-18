@@ -8,5 +8,7 @@
 
 (deftest simple-conversions
   (testing "convert some numbers"
-    (is (= "I" (dec-to-roman 1)))))
+    (is (= "I" (dec-to-roman 1)))
+    (is (= "II" (dec-to-roman 2)))
+  ))
 

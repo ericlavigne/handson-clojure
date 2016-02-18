@@ -6,5 +6,7 @@
   (println x "Hello, World!"))
 
 (defn dec-to-roman [dec]
-  "I")
+  (if (= dec 1)
+    "I"
+    "II"))
 
