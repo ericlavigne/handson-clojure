@@ -50,4 +50,7 @@
   (is (= "XC" (roman 90)))
   (is (= "L" (roman 50)))
 
+  (is (= "XXXVI" (roman 36)))
+  (is (= "MCMXCVI" (roman 1996)))
+
   )
