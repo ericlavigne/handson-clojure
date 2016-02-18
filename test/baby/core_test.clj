@@ -28,5 +28,5 @@
 
 (deftest ninety-test
   (testing "convert 90 to roman"
-    (is (= "XL" (dec-to-roman 90)))))
+    (is (= "XC" (dec-to-roman 90)))))
 
