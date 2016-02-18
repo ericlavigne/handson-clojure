@@ -26,3 +26,7 @@
   (testing "convert 50 to roman"
     (is (= "L" (dec-to-roman 50)))))
 
+(deftest ninety-test
+  (testing "convert 90 to roman"
+    (is (= "XL" (dec-to-roman 90)))))
+

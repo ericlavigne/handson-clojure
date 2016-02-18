@@ -12,7 +12,13 @@
    9 "IX"
    10 "X"
    40 "XL"
-   50 "L"})
+   50 "L"
+   90 "XL"
+  100 "C"
+  400 "CD"
+  500 "D"
+  900 "CM"
+ 1000 "M"})
 
 (defn find-lowest-key [dec]
   (apply max (filter #(<= % dec) (keys conversion-table))))
