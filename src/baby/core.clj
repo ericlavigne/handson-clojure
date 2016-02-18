@@ -8,7 +8,8 @@
 (def conversion-table
   {1 "I"
    2 "II"
-   4 "IV"})
+   4 "IV"
+   7 "VII"})
 
 (defn dec-to-roman [dec]
   (cond (= dec 0) ""
