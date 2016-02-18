@@ -2,14 +2,17 @@
   (:require [clojure.test :refer :all]
             [swc-baby.core :refer :all]))
 
+(def dict [[9 "IX"]
+           [5 "V"]
+           [4 "IV"]])
+
 (defn roman [x]
   (loop [x x
          acc ""]
-    (if (< x 4)
-      (apply str acc (take x (repeat "I")))
-      (if (= x 4)
-        (str acc "IV")
-        (recur (- x 5) (str acc "V"))))))
+    (let [entry (first (filter #(<= (first %) x) dict))]
+      (if-not entry
+        (apply str acc (take x (repeat "I")))
+        (recur (- x (first entry)) (str acc (second entry)))))))
 
 (deftest can-convert-decimal-to-roman
   (is (= "" (roman 0)))
@@ -18,4 +21,5 @@
   (is (= "IV" (roman 4)))
   (is (= "V" (roman 5)))
   (is (= "VI" (roman 6)))
-  (is (= "VIII" (roman 8))))
+  (is (= "VIII" (roman 8)))
+  (is (= "IX" (roman 9))))
