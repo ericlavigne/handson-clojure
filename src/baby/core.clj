@@ -18,6 +18,9 @@
 (defn select-smaller-numbers [maximum numbers]
   (filter #(<= % maximum) numbers))
 
+(defn highest-useable-conversion-key [decimal]
+  (select-smaller-numbers decimal (keys conversion-table)))
+
 (defn dec-to-roman [dec]
   (cond
     (= 0 dec) ""
