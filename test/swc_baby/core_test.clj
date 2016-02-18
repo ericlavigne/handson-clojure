@@ -2,9 +2,11 @@
   (:require [clojure.test :refer :all]
             [swc-baby.core :refer :all]))
 
+(def d [[4 "IV"]])
+
 (defn roman [x]
-  (if (= 4 x)
-    "IV"
+  (if-let [entry (first (filter (fn [e] (= x (first e))) d))]
+    (second entry)
     (apply str (take x (repeat "I")))))
 
 (deftest can-convert-decimal-to-roman
