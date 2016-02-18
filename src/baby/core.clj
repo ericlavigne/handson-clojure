@@ -14,6 +14,5 @@
 
 (defn dec-to-roman [dec]
   (let [highest-key-less-than-dec (apply max (filter #(<= % dec) (keys conversion-table)))]
-    (cond (= dec 0) ""
-          :else (conversion-table dec))))
+    (conversion-table highest-key-less-than-dec)))
 
