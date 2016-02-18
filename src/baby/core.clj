@@ -19,6 +19,5 @@
     acc
     (let [lowest (find-lowest-key dec)
           converted (conversion-table lowest)]
-      (or (conversion-table dec)
-        "II")))))
+      (recur (- dec lowest) (str acc converted))))))
 
