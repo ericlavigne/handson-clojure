@@ -2,7 +2,14 @@
   (:require [clojure.test :refer :all]
             [swc-baby.core :refer :all]))
 
-(def d [[40 "XL"]
+(def d [[1000 "M"]
+        [900 "CM"]
+        [500 "D"]
+        [400 "CD"]
+        [100 "C"]
+        [90 "XC"]
+        [50 "L"]
+        [40 "XL"]
         [10 "X"]
         [9 "IX"]
         [5 "V"]
@@ -33,4 +40,14 @@
   (is (= "XXXVIII" (roman 38)))
   (is (= "XXXIX" (roman 39)))
   (is (= "XLIX" (roman 49)))
+
+  (is (= "MMMM" (roman 4000)))
+  (is (= "CM" (roman 900)))
+  (is (= "D" (roman 500)))
+  (is (= "CD" (roman 400)))
+  (is (= "C" (roman 100)))
+
+  (is (= "XC" (roman 90)))
+  (is (= "L" (roman 50)))
+
   )
