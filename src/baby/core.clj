@@ -5,8 +5,11 @@
   [x]
   (println x "Hello, World!"))
 
+(def conversion-table
+  {1 "I"
+   2 "II"})
+
 (defn dec-to-roman [dec]
-  (if (= dec 1)
-    "I"
-    "II"))
+  (cond (= dec 0) ""
+        :else (conversion-table dec)))
 
