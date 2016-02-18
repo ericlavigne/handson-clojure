@@ -15,5 +15,6 @@
     (is (= "VII" (dec-to-roman 7)))
     (is (= "XXXVI" (dec-to-roman 36)))
     (is (= "MCMXCVI" (dec-to-roman 1996)))
+    (is (= "-MCMXCVI" (dec-to-roman -1996)))
   ))
 
