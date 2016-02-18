@@ -10,3 +10,8 @@
   (testing "convert 1 to roman"
     (is (= "I" (dec-to-roman 1)))))
 
+(deftest two-test
+  (testing "convert 2 to roman"
+    (is (= "II" (dec-to-roman 2)))))
+
+

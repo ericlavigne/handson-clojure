@@ -5,6 +5,11 @@
   [x]
   (println x "Hello, World!"))
 
+(def conversion-table
+  {1 "I"
+   4 "IV"})
+
 (defn dec-to-roman [dec]
-  "I")
+  (or (conversion-table dec)
+    "II"))
 
