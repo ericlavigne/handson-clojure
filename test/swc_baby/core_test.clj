@@ -2,5 +2,9 @@
   (:require [clojure.test :refer :all]
             [swc-baby.core :refer :all]))
 
-(deftest a-test
-  (is (= 0 0)))
+(defn roman [x]
+  "")
+
+(deftest can-convert-decimal-to-roman
+  (is (= ""
+         (roman 0))))
