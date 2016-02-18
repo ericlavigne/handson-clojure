@@ -11,6 +11,7 @@
     (is (= "I" (dec-to-roman 1)))
     (is (= "II" (dec-to-roman 2)))
     (is (= "IV" (dec-to-roman 4)))
+    (is (= "V" (dec-to-roman 5)))
     (is (= "VII" (dec-to-roman 7)))
   ))
 

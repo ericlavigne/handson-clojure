@@ -9,6 +9,7 @@
   {1 "I"
    2 "II"
    4 "IV"
+   5 "V"
    7 "VII"})
 
 (defn dec-to-roman [dec]
