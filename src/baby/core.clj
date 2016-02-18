@@ -26,9 +26,9 @@
     (= 0 dec) ""
     (< dec 0) (str "-"
                    (dec-to-roman (- dec)))
-    :else  (let [conversion-key (highest-useable-conversion-key dec)
-                 conversion-of-conversion-key (conversion-table conversion-key)
-                 remainder (- dec conversion-key)]
+    :else  (let [known-part (highest-useable-conversion-key dec)
+                 conversion-of-conversion-key (conversion-table known-part)
+                 remainder (- dec known-part)]
              (str conversion-of-conversion-key
                   (dec-to-roman remainder)))))
 
