@@ -15,6 +15,8 @@
    900 "CM"
    1000 "M"})
 
+(defn select-smaller-numbers [maximum numbers]
+  (filter #(<= % maximum) numbers))
 
 (defn dec-to-roman [dec]
   (cond
