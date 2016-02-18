@@ -5,14 +5,15 @@
 (def d [[10 "X"]
         [9 "IX"]
         [5 "V"]
-        [4 "IV"]])
+        [4 "IV"]
+        [1 "I"]])
 
 (defn roman [x]
-  (let [[d r :as entry] (first (filter (fn [e] (>= x (first e))) d))
-        ]
-    (if entry
-      r
-      (apply str (take x (repeat "I"))))))
+  (if (= x 0)
+    ""
+    (let [[d r] (first (filter (fn [e] (>= x (first e))) d))
+          q (quot x d)]
+      (apply str (take q (repeat r))))))
 
 (deftest can-convert-decimal-to-roman
   (is (= "" (roman 0)))
