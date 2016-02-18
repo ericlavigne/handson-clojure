@@ -2,7 +2,8 @@
   (:require [clojure.test :refer :all]
             [swc-baby.core :refer :all]))
 
-(def d [[10 "X"]
+(def d [[40 "XL"]
+        [10 "X"]
         [9 "IX"]
         [5 "V"]
         [4 "IV"]
@@ -28,4 +29,8 @@
   (is (= "X" (roman 10)))
 
   (is (= "VIII" (roman 8)))
+
+  (is (= "XXXVIII" (roman 38)))
+  (is (= "XXXIX" (roman 39)))
+  (is (= "XLIX" (roman 49)))
   )
