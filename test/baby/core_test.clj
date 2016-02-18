@@ -30,3 +30,7 @@
   (testing "convert 90 to roman"
     (is (= "XC" (dec-to-roman 90)))))
 
+(deftest hard-test
+  (testing "the hard example"
+    (is (= "MCMXCVI" (dec-to-roman 1996)))))
+
