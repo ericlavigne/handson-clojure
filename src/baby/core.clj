@@ -17,5 +17,6 @@
     (= 0 dec) ""
     (< dec 0) (str (dec-to-roman dec))
     :else  (let [conversion-key (apply max (filter #(<= % dec) (keys conversion-table)))]
-             (conversion-table conversion-key))))
+             (str (conversion-table conversion-key)
+                  (dec-to-roman (- dec conversion-key))))))
 
