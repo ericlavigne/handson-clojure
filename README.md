@@ -1,14 +1,19 @@
-# baby
+# Dublin Software Craftsmanship
 
-A Clojure library designed to ... well, that part is up to you.
+## Hands-on exercises in Clojure
 
-## Usage
+Each branch in this repository represents someone's work in a Dublin
+Software Craftsmanship hands-on exercise.
 
-FIXME
+## Roman Numerals - Baby Steps
 
-## License
+Converting from decimal to roman numeral, using test-driven development
+with baby steps. This exercise has a constraint of 2 minutes between every
+commit and if your tests fail when each two minute session is up then you
+must remove everything up to the last commit.
 
-Copyright © 2016 FIXME
+http://www.meetup.com/TechMeetupspace/events/228324469/
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+[Eric - round 1](http://github.com/ericlavigne/handson-clojure/tree/roman-ericlavigne-round1)
+[Eric - round 2](http://github.com/ericlavigne/handson-clojure/tree/roman-ericlavigne-round2)
+
