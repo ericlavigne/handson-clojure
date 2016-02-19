@@ -12,8 +12,13 @@ with baby steps. This exercise has a constraint of 2 minutes between every
 commit and if your tests fail when each two minute session is up then you
 must remove everything up to the last commit.
 
-http://www.meetup.com/TechMeetupspace/events/228324469/
+[Baby Steps event page](http://www.meetup.com/TechMeetupspace/events/228324469/)
 
-[Eric - round 1](http://github.com/ericlavigne/handson-clojure/tree/roman-ericlavigne-round1)
-[Eric - round 2](http://github.com/ericlavigne/handson-clojure/tree/roman-ericlavigne-round2)
+[Imre Koszo (Sagax) - round 1](http://github.com/ericlavigne/handson-clojure/tree/roman-imrekoszo-round1)
+
+[Imre Koszo (Sagax) - round 2](http://github.com/ericlavigne/handson-clojure/tree/roman-imrekoszo-round2)
+
+[Eric Lavigne (Sagax) - round 1](http://github.com/ericlavigne/handson-clojure/tree/roman-ericlavigne-round1)
+
+[Eric Lavigne (Sagax) - round 2](http://github.com/ericlavigne/handson-clojure/tree/roman-ericlavigne-round2)
 
